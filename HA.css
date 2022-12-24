@@ -6,3 +6,9 @@
     font-weight: bolder;
     color: white;
 }
+
+.nav-link:hover {
+    color: orange;
+    font-size: 20px;
+    background-color: white;
+}
