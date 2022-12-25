@@ -7,6 +7,6 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + "/public/ha.html")
 })
 app.get('/home', (req, res) => {
-    res.render('home')
+    res.sendFile(__dirname + "/public/home.html")
 })
 app.listen(3306, () => console.log("listening.."))
