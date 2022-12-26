@@ -8,7 +8,7 @@ header {
 }
 
 #navn {
-    background-color: orange;
+    background-color: #f2881e;
     grid-area: nav;
 }
 
@@ -23,28 +23,21 @@ header {
     background-color: white;
 }
 
-
-#about {
-    grid-area: about;
-    height: 40px;
-    width: 600px;
-    font-weight: bolder;
-    color: orange;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: fit-content;
+    margin: auto;
 }
 
-#aboutin {
-    grid-area: about;
-    height: 50px;
-    width: 600px;
+.content .about {
+    width: 50%;
     font-weight: bolder;
-    color: white;
-    background-color: orange;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
+}
+
+.buttons {
+    align-items: center;
+    width: 80%;
+    margin: auto;
 }
