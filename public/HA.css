@@ -1,5 +1,15 @@
+.container {
+    max-width: 1600px;
+    max-height: 460px;
+}
+
+header {
+    width: 1536px;
+}
+
 #navn {
     background-color: orange;
+    grid-area: nav;
 }
 
 .nav-link {
@@ -15,6 +25,7 @@
 
 
 #about {
+    grid-area: about;
     height: 40px;
     width: 600px;
     font-weight: bolder;
@@ -26,6 +37,7 @@
 }
 
 #aboutin {
+    grid-area: about;
     height: 50px;
     width: 600px;
     font-weight: bolder;
