@@ -1,15 +1,19 @@
+body {
+    background-color: black;
+
+}
+
 .container {
-    max-width: 1600px;
+    max-width: 1534px;
     max-height: 460px;
 }
 
 header {
-    width: 1536px;
+    width: 1534px;
 }
 
 #navn {
     background-color: #f2881e;
-    grid-area: nav;
 }
 
 .nav-link {
@@ -34,10 +38,22 @@ header {
 .content .about {
     width: 50%;
     font-weight: bolder;
+    color: #f2881e;
 }
 
 .buttons {
     align-items: center;
     width: 80%;
     margin: auto;
+}
+
+.btn-primary {
+    background-color: #f2881e;
+    border: #f2881e solid 5px;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #f2881e;
+    border: white 8px solid;
 }
