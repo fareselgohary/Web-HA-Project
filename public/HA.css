@@ -5,7 +5,7 @@ body {
 
 .container {
     max-width: 1534px;
-    max-height: 460px;
+    max-height: 100vh;
 }
 
 header {
@@ -56,4 +56,38 @@ header {
     background-color: white;
     color: #f2881e;
     border: white 8px solid;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+}
+
+.login {
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+
+.login h1 {
+    color: #f2881e;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.login .log {
+    padding: 20px;
+    margin: 10px;
+}
+
+#user {
+    margin: 5px;
+}
+
+#pass {
+    margin: 5px;
 }
