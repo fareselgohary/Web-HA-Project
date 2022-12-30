@@ -63,6 +63,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 90vh;
+    padding: 10px;
 
 }
 
@@ -90,4 +91,25 @@ header {
 
 #pass {
     margin: 5px;
+}
+
+.fb {
+    width: 200px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    justify-content: ;
+    background-color: #f2881e;
+}
+
+#us {
+    margin: 10px;
+}
+
+#pn {
+    margin: 10px;
+}
+
+#ff {
+    margin: 10px;
 }
