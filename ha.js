@@ -9,4 +9,10 @@ app.get('/', (req, res) => {
 app.get('/home', (req, res) => {
     res.sendFile(__dirname + "/public/home.html")
 })
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + "/public/login.html")
+})
+app.get('/Feedback', (req, res) => {
+    res.sendFile(__dirname + "/public/Feedback.html")
+})
 app.listen(3306, () => console.log("listening.."))
