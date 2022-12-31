@@ -5,7 +5,8 @@ const path = require('path')
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
-const Loginp = require('./models/db.js');
+const myfunctions = require('./models/db.js');
+const localstrategy = require('passport-local').Strategy
 mongoose.connect('mongodb://127.0.0.1:27017/test', (err) => {
     if (err) {
         console.log(err)
@@ -33,12 +34,37 @@ app.get('/Feedback', (req, res) => {
 app.get('/Done', (req, res) => {
     res.sendFile(__dirname + "/public/done.html")
 })
+app.get('/Locations', (req, res) => {
+    res.sendFile(__dirname + "/public/location.html")
+})
+app.get('/Menu', (req, res) => {
+    res.sendFile(__dirname + "/public/menu.html")
+})
+app.get('/Offers', (req, res) => {
+    res.sendFile(__dirname + "/public/offers.html")
+})
 app.post("/signup", (req, res) => {
-    const signn = new Loginp(req.body)
+    const signn = new myfunctions.Loginp(req.body)
     console.log(req.body)
     signn.save().then((result) => { res.redirect("/login") }).catch((err) => { console.log(err) })
 
 
+})
+app.post("/Feedback", (req, res) => {
+    const fff = new myfunctions.Feedpu(req.body)
+    console.log(req.body)
+    fff.save().then((result) => { res.redirect("/Done") }).catch((err) => { console.log(err) })
+
+
+})
+app.post('/login', (req, res) => {
+    var user = req.body.user;
+    var pass = req.body.pass;
+    if (user == '' || pass == '') {
+        return res.end('some fields are empty');
+    }
+    console.log(user, pass);
+    res.end('received');
 })
 
 

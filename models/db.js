@@ -7,4 +7,14 @@ const loginn = new schema({
 }
 );
 const Loginp = mongoose.model('Loginp', loginn)
-module.exports = Loginp
+const feednp = new schema({
+    name: String,
+    pn: String,
+    Feedback: String,
+}
+);
+const Feedpu = mongoose.model('Feedpu', feednp)
+module.exports = {
+    Loginp,
+    Feedpu,
+}

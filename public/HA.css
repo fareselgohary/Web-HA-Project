@@ -124,4 +124,31 @@ header {
     margin: 10px;
 }
 
-#
+.loc {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.menu-area {
+    width: 1200px;
+    margin: 60px auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #f2881e;
+    margin: 20px;
+}
+
+.menuc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.single-menu {
+    flex-basis: 580px;
+    color: aliceblue;
+}
