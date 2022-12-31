@@ -93,23 +93,35 @@ header {
     margin: 5px;
 }
 
-.fb {
-    width: 200px;
-    margin: 50px auto;
+.box2 {
     display: flex;
     align-items: center;
-    justify-content: ;
-    background-color: #f2881e;
+    justify-content: center;
+    height: 90vh;
+    padding: 10px;
+
 }
 
-#us {
+.Feedback {
+    background-color: whitesmoke;
+    border-radius: 7px;
+}
+
+.Feedback .fed {
+    padding: 20px;
     margin: 10px;
 }
 
-#pn {
+.Feedback h1 {
+    color: #f2881e;
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+#users {
     margin: 10px;
 }
 
-#ff {
-    margin: 10px;
-}
+#
