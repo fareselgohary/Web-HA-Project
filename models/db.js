@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 mongoose.connect('mongodb://127.0.0.1:27017/test')
 const schema = mongoose.Schema;
+const jwt = require('jsonwebtoken')
 //----------------------------------------------
 const loginn = new schema({
     user: { type: String, required: true, unique: true },

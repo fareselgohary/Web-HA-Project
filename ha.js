@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 const path = require('path')
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }));
-var router = express.Router();
+const jwt = require('jsonwebtoken')
 const mongoose = require('mongoose');
 const { Loginpa, Feedpu } = require('./models/db.js');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -52,6 +52,9 @@ app.get('/Menu', (req, res) => {
 app.get('/Offers', (req, res) => {
     res.sendFile(__dirname + "/public/offers.html")
 })
+app.get('/Welcome', (req, res) => {
+    res.sendFile(__dirname + "/public/logindone.html")
+})
 app.post("/Feedback", (req, res) => {
     const fff = new Feedpu(req.body)
     console.log(req.body)
@@ -72,6 +75,8 @@ app.post('/login', (req, res) => {
             }
             else {
                 res.redirect("/home")
+                var Token = jwt.sign({ _id: obj._id, user: req.body.user, pass: req.body.pass }, 'faresomar', { expiresIn: 20 })
+                console.log(Token)
             }
         }
     })
