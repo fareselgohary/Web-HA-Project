@@ -53,7 +53,7 @@ app.get('/Offers', (req, res) => {
     res.sendFile(__dirname + "/public/offers.html")
 })
 app.get('/Welcome', (req, res) => {
-    res.sendFile(__dirname + "/public/logindone.html")
+    res.sendFile(__dirname + "/public/welcome.html")
 })
 app.post("/Feedback", (req, res) => {
     const fff = new Feedpu(req.body)
@@ -74,7 +74,7 @@ app.post('/login', (req, res) => {
                 res.redirect("/login")
             }
             else {
-                res.redirect("/home")
+                res.redirect("/Welcome")
                 var Token = jwt.sign({ _id: obj._id, user: req.body.user, pass: req.body.pass }, 'faresomar', { expiresIn: 20 })
                 console.log(Token)
             }
