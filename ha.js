@@ -6,6 +6,8 @@ const path = require('path')
 app.use(express.static(__dirname + '/public'))
 app.use(express.urlencoded({ extended: true }));
 const jwt = require('jsonwebtoken')
+var cookieParser = require('cookie-parser')
+app.use(cookieParser())
 const mongoose = require('mongoose');
 const { Loginpa, Feedpu } = require('./models/db.js');
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,8 +33,6 @@ app.post("/signup", (req, res) => {
     const signn = new Loginpa({ user: req.body.user, pass: req.body.pass })
     console.log(signn)
     signn.save().then(res.redirect("/login")).catch((err) => { res.send("try again") })
-
-
 })
 app.get('/login', (req, res) => {
     res.sendFile(__dirname + "/public/login.html")
