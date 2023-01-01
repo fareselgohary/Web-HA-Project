@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+mongoose.connect('mongodb://127.0.0.1:27017/test')
 const schema = mongoose.Schema;
 //----------------------------------------------
 const loginn = new schema({
@@ -6,7 +7,7 @@ const loginn = new schema({
     pass: { type: String, required: true }
 }
 );
-const Loginp = mongoose.model('Loginp', loginn)
+const Loginpa = mongoose.model('Loginpa', loginn, 'Loginpa')
 const feednp = new schema({
     name: String,
     pn: String,
@@ -15,6 +16,6 @@ const feednp = new schema({
 );
 const Feedpu = mongoose.model('Feedpu', feednp)
 module.exports = {
-    Loginp,
-    Feedpu,
+    Loginpa,
+    Feedpu
 }
