@@ -29,7 +29,7 @@ app.get('/signup', (req, res) => {
     res.sendFile(__dirname + "/public/sign.html")
 })
 app.get('/Feedback', (req, res) => {
-    res.sendFile(__dirname + "/public/Feedback.html")
+    res.sendFile(__dirname + "/public/Feedback.html")``
 })
 app.get('/Done', (req, res) => {
     res.sendFile(__dirname + "/public/done.html")
@@ -46,7 +46,7 @@ app.get('/Offers', (req, res) => {
 app.post("/signup", (req, res) => {
     const signn = new myfunctions.Loginp(req.body)
     console.log(req.body)
-    signn.save().then((result) => { res.redirect("/login") }).catch((err) => { console.log(err) })
+    signn.save().then((result) => { res.redirect("/login") }).catch((err) => { res.send("try again") })
 
 
 })
@@ -58,13 +58,7 @@ app.post("/Feedback", (req, res) => {
 
 })
 app.post('/login', (req, res) => {
-    var user = req.body.user;
-    var pass = req.body.pass;
-    if (user == '' || pass == '') {
-        return res.end('some fields are empty');
-    }
-    console.log(user, pass);
-    res.end('received');
+    myfunctions.Loginp.findOne{ }
 })
 
 

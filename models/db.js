@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 const schema = mongoose.Schema;
 //----------------------------------------------
 const loginn = new schema({
-    user: String,
-    pass: String,
+    user: { type: String, required: true, unique: true },
+    pass: { type: String, required: true }
 }
 );
 const Loginp = mongoose.model('Loginp', loginn)
